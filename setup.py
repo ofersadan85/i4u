@@ -1,5 +1,7 @@
-from distutils.core import setup
+from setuptools import setup
 from pathlib import Path
+
+long_description = Path(__file__).with_name('README.md').read_text(encoding='utf-8')
 
 setup(
     name='i4u',
@@ -10,8 +12,8 @@ setup(
     author='Ofer Sadan',
     author_email='ofersadan85@gmail.com',
     description='Python package to interact with Invoice4U API',
-    long_description=Path(__file__).with_name('README.md').read_text(encoding='utf-8'),
     long_description_content_type="text/markdown",
+    long_description=long_description,
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
