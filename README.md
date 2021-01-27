@@ -101,7 +101,7 @@ You can edit and save customer details:
 
 You can also create a new customer:
 
-    from i4u import Customer
+    from i4u.classes import Customer
 
     new_customer = Customer('Elon Musk', City='Jerusalem')
     created = i4u_api.create_customer(new_customer)
@@ -109,7 +109,7 @@ You can also create a new customer:
 
 Similarly, you can create new documents along with new customers in the same call:
 
-    from i4u import InvoiceOrder, DocumentItem, Customer
+    from i4u.classes import InvoiceOrder, DocumentItem, Customer
 
     customer = Customer('Joe Smith')  # Create a new client while creating the document
     products = [

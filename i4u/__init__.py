@@ -6,7 +6,7 @@ from pathlib import Path
 
 import requests
 import zeep
-from .classes import *
+from .classes import Invoice4UError, Document, Customer, serialize
 
 logging.getLogger('zeep').setLevel(logging.ERROR)
 
@@ -69,8 +69,14 @@ class Invoice4U(zeep.CachingClient):
             raise Invoice4UError(new_doc.Errors)
         return serialize(new_doc, doc)
 
-    def create_customer(self, cus: Customer):
+    def create_customer(self, cus: Customer) -> Customer:
         new_cus = self.service.CreateCustomer(asdict(cus), self.token)
         if new_cus.Errors:
             raise Invoice4UError(new_cus.Errors)
         return serialize(new_cus, cus)
+
+    def update_customer(self, cus: Customer) -> Customer:
+        updated = self.service.UpdateCustomer(asdict(cus), self.token)
+        if updated.Errors:
+            raise Invoice4UError(updated.Errors)
+        return serialize(updated, cus)
