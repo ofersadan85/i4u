@@ -38,65 +38,6 @@ To get a list of **_all_** customers belonging to your organisation:
 
     customers = i4u_api.customers()
 
-This will output a list of customers, each one is returned as in the following example form:
-    
-    {
-        'Errors': None,
-        'Info': None,
-        'OpenInfo': None,
-        'AccountNumber': None,
-        'Active': False,
-        'AddToMailChimp': None,
-        'Address': None,
-        'BankName': None,
-        'BranchName': None,
-        'Cell': None,
-        'City': None,
-        'ClientCode': 0,
-        'ContactEmail': None,
-        'ContactFirstName': None,
-        'ContactLastName': None,
-        'ContactName': None,
-        'Country': None,
-        'CountryId': None,
-        'CreditCardNumber': None,
-        'CreditCardType': None,
-        'CustomerEmails': {
-            'AssociatedEmail': []
-        },
-        'DateCreated': datetime.datetime(2012, 11, 20, 10, 8, 45),
-        'Email': 'mail@mail.com',
-        'EmailAccounting': None,
-        'ExtNumber': 100,
-        'Fax': None,
-        'FreeBalance': 0.0,
-        'FreeUniqueID': None,
-        'FreeZip': None,
-        'Guid': None,
-        'HasBeenExported': False,
-        'ID': 76747,
-        'IdNewAndOldSystem': None,
-        'InternalNote': None,
-        'IsAutomaicInvoices': None,
-        'IsFromLead': False,
-        'IsNonUniqueNameCreation': False,
-        'LeadId': 0,
-        'Name': 'vvvvvv',
-        'NameAccounting': None,
-        'OrgID': 50,
-        'PayTerms': 0,
-        'Phone': None,
-        'PhoneAccounting': None,
-        'Retainer': False,
-        'RetainerAmount': 0.0,
-        'RetainerTitle': None,
-        'Token': None,
-        'Ucan2ClientID': 1968083,
-        'UniqueID': None,
-        'Website': None,
-        'Zip': None
-    }
-
 You can edit and save customer details:
 
     customers = i4u_api.customers()
@@ -131,7 +72,7 @@ Alternatively, create the same document for an existing customer:
     new_invoice_order = InvoiceOrder(Subject='Furniture', Items=products, ClientID=customer.ID)
     created_doc = i4u_api.create_document(new_invoice_order)
 
-You can also download the documents:
+You can also download the document:
 
     i4u_api.download_document(doc=created_doc, destination='/some/folder')
 
