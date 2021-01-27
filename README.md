@@ -1,14 +1,22 @@
 # i4u
+![](https://img.shields.io/github/v/release/ofersadan85/i4u)
+![](https://img.shields.io/pypi/v/i4u)
+![](https://img.shields.io/github/license/ofersadan85/i4u)
+![](https://img.shields.io/github/workflow/status/ofersadan85/i4u/Python%20package%20tests?label=Tests)
+
 Python package to interact with [Invoice4U](https://www.invoice4u.co.il) API
 
 Invoice4U API natively uses wsdl soap, so to interact with it this package is built based on [zeep](https://github.com/mvantellingen/python-zeep) with additional data structures that allow easier interaction
 
 ## Installation
-To install with pip:
+![](https://img.shields.io/pypi/v/i4u)
+![](https://img.shields.io/pypi/wheel/i4u)
 
     pip install i4u
 
 ## Requirements
+![](https://img.shields.io/pypi/pyversions/i4u)
+
 As this package is currently in initial development, it was only tested using python 3.7, 3.8 and 3.9 and only on Windows and on Linux Ubuntu 20.04
 
 It **_might_** work on python 3.6 if you backport the missing [dataclasses](https://pypi.org/project/dataclasses/) (`pip install dataclasses`), and I can't see any reason it would not work on other operating systems (but did not test that)
