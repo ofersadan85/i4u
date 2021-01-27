@@ -9,10 +9,9 @@ To install with pip:
     pip install i4u
 
 ## Requirements
-
 As this package is currently in initial development, it was only tested using python 3.7, 3.8 and 3.9 and only on Windows and on Linux Ubuntu 20.04
 
-It **might** work on python 3.6 if you backport the missing [dataclasses](https://pypi.org/project/dataclasses/) (`pip install dataclasses`) and I can't see any reason it wouldn't work on other operating systems (but did not test that)
+It **_might_** work on python 3.6 if you backport the missing [dataclasses](https://pypi.org/project/dataclasses/) (`pip install dataclasses`), and I can't see any reason it would not work on other operating systems (but did not test that)
 
 If you wish to create a pull request to add tests / modifications that enable it to work on other python versions or operating systems, see the [Contributing]() section below
 
@@ -80,7 +79,8 @@ More examples of document types you can create will be added here soon!
     
 
 ## Contributing
+If you would like to contribute to this project, you are welcome to submit a pull request
 
-If you would like to contribute to this project, you are welcome to submit a pull request. For bugs / feature requests please submit issues
+For bugs / feature requests please submit [issues](https://github.com/ofersadan85/i4u/issues)
 
 In order to add features not yet available in this package but that are possible with Invoice4U API in principle, please refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
