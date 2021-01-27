@@ -29,6 +29,7 @@ class Customer:
     PayTerms: int = -1  # מיידי
     Active: bool = True
     ExtNumber: Optional[int] = None  # מספר מזהה במערכת הפנימית
+    Errors: None = None
 
     def __post_init__(self):
         if self.ExtNumber is None:
@@ -100,6 +101,8 @@ class Document:
     # SmsMessages: list
     UniqueID: Optional[str] = None
     DocumentNumber: Optional[str] = None
+    Errors: None = None
+    Total: Optional[float] = None
 
     def __post_init__(self):
         if isinstance(self.Items, list):
