@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='i4u',
-    version='0.0.1b',
+    version='0.0.2',
     packages=['i4u'],
     url='https://github.com/ofersadan85/i4u-py',
     license='MIT License',
