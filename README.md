@@ -36,7 +36,7 @@ To verify that you're logged in correctly, check that you received a `token`
 
 To get a list of **_all_** customers belonging to your organisation:
 
-    customers = i4u_api.customers()
+    customers = i4u_api.get_all_customers()
 
 You can edit and save customer details:
 
