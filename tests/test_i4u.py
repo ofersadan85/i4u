@@ -1,5 +1,6 @@
 import unittest
-from i4u import Invoice4U, Customer, InvoiceReceipt, GeneralCustomer, DocumentItem, CashPayment, Invoice4UError
+from i4u import Invoice4U
+from i4u.classes import Customer, InvoiceReceipt, GeneralCustomer, DocumentItem, CashPayment, Invoice4UError
 
 
 class Invoice4UFull(unittest.TestCase):
