@@ -64,6 +64,10 @@ class Invoice4U(zeep.CachingClient):
         return destination
 
     def create_document(self, doc: Document) -> Document:
+        if hasattr(doc, 'NewCustomer') and doc.NewCustomer is not None:
+            new_customer = self.create_customer(doc.NewCustomer)
+            delattr(doc, 'NewCustomer')
+            doc.ClientID = new_customer.ID
         new_doc = self.service.CreateDocument(asdict(doc), self.token)
         if new_doc.Errors:
             raise Invoice4UError(new_doc.Errors)

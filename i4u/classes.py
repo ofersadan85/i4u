@@ -103,6 +103,7 @@ class Document:
     DocumentNumber: Optional[str] = None
     Errors: None = None
     Total: Optional[float] = None
+    NewCustomer: Optional[Customer] = None
 
     def __post_init__(self):
         if isinstance(self.Items, list):
