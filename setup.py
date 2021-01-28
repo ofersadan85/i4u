@@ -22,5 +22,5 @@ setup(
         "Programming Language :: Python :: 3.9",
     ],
     include_package_data=True,
-    install_requires=["requests>=2.25.1", "zeep>=0.0.0"],
+    install_requires=["requests>=2.25.1", "zeep>=4.0.0"],
 )
