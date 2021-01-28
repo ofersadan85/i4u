@@ -84,11 +84,17 @@ You can also download the document:
     i4u_api.download_document(doc=created_doc, destination='/some/folder')
 
 More examples of document types you can create will be added here soon!
-    
 
 ## Contributing
+
 If you would like to contribute to this project, you are welcome to submit a pull request
 
 For bugs / feature requests please submit [issues](https://github.com/ofersadan85/i4u/issues)
 
-In order to add features not yet available in this package but that are possible with Invoice4U API in principle, please refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
+In order to add features not yet available in this package but that are possible with Invoice4U API in principle, please
+refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
+
+## Warranty / Liability / Official support
+
+This project is being developed independently of Invoice4U and not supported officially by them, we provide the
+package "as-is" without any implied warranty or liability, usage is your own responsibility
