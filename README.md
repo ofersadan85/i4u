@@ -98,5 +98,3 @@ refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
 
 This project is being developed independently of Invoice4U and not supported officially by them, we provide the
 package "as-is" without any implied warranty or liability, usage is your own responsibility
-
-test
