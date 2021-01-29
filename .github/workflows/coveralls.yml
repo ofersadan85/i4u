@@ -19,6 +19,8 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install coveralls
       - name: Test coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           coverage run --source=i4u -m unittest
           coveralls
