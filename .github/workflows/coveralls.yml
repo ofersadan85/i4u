@@ -13,6 +13,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
+      - name: Install coveralls (https://github.com/TheKevJames/coveralls-python)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install coveralls
+      - name: Test coverage
+          coverage run --source=i4u -m unittest
+          coveralls
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
         with:
