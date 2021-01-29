@@ -2,7 +2,7 @@ name: Coveralls tests
 
 on:
   push:
-    branches: [ master ]
+    branches: [ test_actions ]
 
 jobs:
   coverage:
