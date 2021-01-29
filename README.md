@@ -2,7 +2,7 @@
 ![](https://img.shields.io/github/v/release/ofersadan85/i4u)
 ![](https://img.shields.io/pypi/v/i4u)
 ![](https://img.shields.io/github/license/ofersadan85/i4u)
-![](https://img.shields.io/github/workflow/status/ofersadan85/i4u/Python%20package%20tests?label=Tests)
+![](https://img.shields.io/github/workflow/status/ofersadan85/i4u/Python%20package%20tests?label=tests)
 [![Coverage Status](https://coveralls.io/repos/github/ofersadan85/i4u/badge.svg?branch=master)](https://coveralls.io/github/ofersadan85/i4u?branch=master)
 
 Python package to interact with [Invoice4U](https://www.invoice4u.co.il) API
