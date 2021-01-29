@@ -6,7 +6,7 @@ long_description = Path(__file__).with_name('README.md').read_text(encoding='utf
 
 setup(
     name='i4u',
-    version='0.0.5',
+    version='0.0.6',
     packages=['i4u'],
     url='https://github.com/ofersadan85/i4u-py',
     license='MIT License',
