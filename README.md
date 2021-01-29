@@ -86,11 +86,24 @@ You can also download the document:
 
 More examples of document types you can create will be added here soon!
 
+The basic API exposed by `zeep` can be reached via the `service` property, usually including the `token`. This allows
+you to access API functions that are not yet available with this package, and can also help if you need to get the raw
+data returned by `zeep`. For example:
+
+    raw_document = i4u_api.service.GetDocumentByNumber(doc.DocumentNumber, doc.DocumentType, i4u_api.token)
+
 ## Contributing
 
-If you would like to contribute to this project, you are welcome to submit a pull request
-
 For bugs / feature requests please submit [issues](https://github.com/ofersadan85/i4u/issues)
+
+![](https://img.shields.io/github/issues-raw/ofersadan85/i4u)
+![](https://img.shields.io/github/issues-closed-raw/ofersadan85/i4u)
+
+If you would like to contribute to this project, you are welcome
+to [submit a pull request](https://github.com/ofersadan85/i4u/pulls)
+
+![](https://img.shields.io/github/issues-pr-raw/ofersadan85/i4u)
+![](https://img.shields.io/github/issues-pr-closed-raw/ofersadan85/i4u)
 
 In order to add features not yet available in this package but that are possible with Invoice4U API in principle, please
 refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
@@ -99,3 +112,10 @@ refer to [Invoice4U API documentation](https://invoice4uapi.docs.apiary.io/)
 
 This project is being developed independently of Invoice4U and not supported officially by them, we provide the
 package "as-is" without any implied warranty or liability, usage is your own responsibility
+
+## Additional info, just because I like badges
+
+![](https://img.shields.io/github/languages/code-size/ofersadan85/i4u)
+![](https://img.shields.io/github/downloads/ofersadan85/i4u/total?label=github%20downloads)
+![](https://img.shields.io/pypi/dm/i4u?label=pypi%20downloads)
+![](https://img.shields.io/pypi/dw/i4u?label=pypi%20downloads)
