@@ -18,11 +18,9 @@ Invoice4U API natively uses wsdl soap, so to interact with it this package is bu
 ## Requirements
 ![](https://img.shields.io/pypi/pyversions/i4u)
 
-As this package is currently in initial development, it was only tested using python 3.7, 3.8 and 3.9 and only on Windows and on Linux Ubuntu 20.04
-
-It **_might_** work on python 3.6 if you backport the missing [dataclasses](https://pypi.org/project/dataclasses/) (`pip install dataclasses`), and I can't see any reason it would not work on other operating systems (but did not test that)
-
-If you wish to create a pull request to add tests / modifications that enable it to work on other python versions or operating systems, see the [Contributing]() section below
+Tested with python 3.6 and above, on both Windows 10 and Ubuntu 20.04. Should (in theory) work on other operating
+systems. If you wish to create a pull request to add tests / modifications that verify it is able to work on other
+python versions or operating systems, see the [Contributing]() section below
 
 ## Usage Examples
 To connect and authenticate you must first create an `Invoice4U` instance with your username and password provided (this assumes you have an account set up on [Invoice4U](https://www.invoice4u.co.il))
