@@ -1,0 +1,26 @@
+name: Coveralls tests
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+                          - name: Install coveralls (https://github.com/TheKevJames/coveralls-python)
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install coveralls
+        - name: Test coverage
+            coverage run --source=i4u -m unittest
+            coveralls
+        - name: Coveralls GitHub Action
+          uses: coverallsapp/github-action@v1.1.2
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
