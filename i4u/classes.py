@@ -110,8 +110,6 @@ class Document:
             self.Items = {'DocumentItem': self.Items}
         if isinstance(self.Payments, list):
             self.Payments = {'Payment': self.Payments}
-        if not any((self.ClientID, self.NewCustomer, self.GeneralCustomer)):
-            raise ValueError('חייב להופיע זיהוי לקוח או שם לקוח זמני בחשבונית')
 
 
 @dataclass

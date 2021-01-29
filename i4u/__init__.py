@@ -6,6 +6,7 @@ from pathlib import Path
 
 import requests
 import zeep
+
 from .classes import Invoice4UError, Document, Customer, serialize
 
 logging.getLogger('zeep').setLevel(logging.ERROR)
@@ -27,10 +28,7 @@ class Invoice4U(zeep.CachingClient):
 
     def get_all_customers(self):
         response = self.service.GetCustomersByOrgId(self.token)
-        if response.Errors:
-            raise Invoice4UError(response.Errors)
-        else:
-            return [serialize(c, Customer()) for c in response.Response.Customer]
+        return [serialize(c, Customer()) for c in response.Response.Customer]
 
     def get_customer(self, cus: Customer) -> Customer:
         if cus.ExtNumber:
@@ -39,20 +37,15 @@ class Invoice4U(zeep.CachingClient):
             return serialize(self.service.GetCustomerByName(cus.Name, self.token), Customer())
         raise Invoice4UError('Not enough details to find customer')
 
-    @lru_cache(maxsize=32)
     def get_document(self, doc: Document) -> Document:
-        if doc.UniqueID:
-            zeep_doc = self.service.GetDocument(doc.UniqueID)
-            i4u_doc = Document(zeep_doc.Items, zeep_doc.Payments, zeep_doc.DocumentType)
-            return serialize(zeep_doc, i4u_doc)
         if doc.DocumentNumber and doc.DocumentType:
             zeep_doc = self.service.GetDocumentByNumber(doc.DocumentNumber, doc.DocumentType, self.token)
             i4u_doc = Document(zeep_doc.Items, zeep_doc.Payments, zeep_doc.DocumentType)
             return serialize(zeep_doc, i4u_doc)
         raise Invoice4UError('Not enough details to find document')
 
-    @lru_cache(maxsize=32)
-    def document_url(self, doc: Document) -> str:
+    @staticmethod
+    def document_url(doc: Document) -> str:
         return f'https://newview.invoice4u.co.il/Views/PDF.aspx?docid={doc.UniqueID}'
 
     def download_document(self, doc: Document, destination: Path = Path.home() / 'Downloads') -> Path:
