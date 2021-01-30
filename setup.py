@@ -1,16 +1,14 @@
-import sys
 from pathlib import Path
 
 from setuptools import setup
 
 long_description = Path(__file__).with_name('README.md').read_text(encoding='utf-8')
 
-dataclasses = ['dataclasses>=0.8'] if sys.version.startswith('3.6') else []
-requirements = Path(__file__).with_name('requirements.txt').read_text().split() + dataclasses
+requirements = Path(__file__).with_name('requirements.txt').read_text().split()
 
 setup(
     name='i4u',
-    version='0.0.5',
+    version='0.0.6',
     packages=['i4u'],
     url='https://github.com/ofersadan85/i4u',
     license='MIT License',
@@ -28,5 +26,5 @@ setup(
         "Programming Language :: Python :: 3.9",
     ],
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=requirements + ["dataclasses;python_version<'3.7'"],
 )
