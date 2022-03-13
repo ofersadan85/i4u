@@ -8,7 +8,7 @@ requirements = Path(__file__).with_name('requirements.txt').read_text().split()
 
 setup(
     name='i4u',
-    version='0.0.6',
+    version='0.0.7',
     packages=['i4u'],
     url='https://github.com/ofersadan85/i4u',
     license='MIT License',
@@ -24,6 +24,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
     include_package_data=True,
     install_requires=requirements + ["dataclasses;python_version<'3.7'"],
