@@ -27,7 +27,7 @@ Or to use as source
 
 ![](https://img.shields.io/pypi/pyversions/i4u)
 
-Tested with python 3.6 and above, on both Windows 10 and Ubuntu 20.04. Should (in theory) work on other operating
+Tested with python 3.6-3.10, on both Windows 10 and Ubuntu 20.04. Should (in theory) work on other operating
 systems. If you wish to create a pull request to add tests / modifications that verify it is able to work on other
 python versions or operating systems, see the [Contributing]() section below
 
